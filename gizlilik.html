@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gizlilik Politikası · The Vault</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <p><a href="index.html">← The Vault</a></p>
+      <h1>Gizlilik Politikası</h1>
+      <p class="muted">Son güncelleme: 15 Ekim 2026</p>
+
+      <h2>Kısaca</h2>
+      <p>
+        The Vault kişisel kullanım için yapılmış bir şifre kasasıdır. Kayıtların yalnızca senin cihazlarında ve (senkronu açarsan) senin
+        Google Drive'ında, senin ana parolanla şifrelenmiş olarak durur. Geliştiricinin çalıştırdığı bir sunucu yoktur; hiçbir bilgi
+        geliştiriciye gönderilmez, satılmaz veya paylaşılmaz.
+      </p>
+
+      <h2>Saklanan bilgiler</h2>
+      <ul>
+        <li>Kaydettiğin hesaplar (site adı, giriş linki, kullanıcı adı, şifre, not), sekmeler ve ayarlar.</li>
+        <li>
+          Bu bilgilerin hepsi tek bir dosyada, ana parolandan türetilen bir anahtarla (Argon2id + AES-256-GCM) şifrelenmiş olarak saklanır.
+          Ana parola hiçbir yere kaydedilmez; unutulursa kasa açılamaz.
+        </li>
+      </ul>
+
+      <h2>Google Drive ve Google hesabı</h2>
+      <ul>
+        <li>
+          Senkronu açarsan uygulama yalnızca <code>drive.appdata</code> iznini ister. Bu izin, Google Drive'ında uygulamaya özel gizli bir
+          klasörü açar; Drive'daki diğer dosyalarını göremez ve değiştiremez.
+        </li>
+        <li>Bu klasöre yalnızca şifreli kasa dosyası yazılır. Ana parola ve şifreleme anahtarı cihazından çıkmaz.</li>
+        <li>
+          Senkron ekranında hangi hesabın bağlı olduğunu göstermek için Google hesabının e-posta adresi okunur ve yalnızca cihazında
+          tutulur.
+        </li>
+        <li>
+          Google'dan alınan verilerin kullanımı
+          <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Hizmetleri Kullanıcı Verisi Politikası</a>'na,
+          Sınırlı Kullanım şartları dahil, uygundur. Veriler yalnızca kasayı senin cihazların arasında eşitlemek için kullanılır.
+        </li>
+      </ul>
+
+      <h2>Chrome uzantısı</h2>
+      <ul>
+        <li>Uzantı, giriş bilgilerini yalnızca sen bir giriş tuşuna bastığında ve yalnızca o hesabın kayıtlı olduğu sitede sayfaya yazar.</li>
+        <li>Ziyaret ettiğin sayfalar kaydedilmez veya herhangi bir yere gönderilmez.</li>
+      </ul>
+
+      <h2>Silme</h2>
+      <p>
+        Uygulamadaki "Bağlantıyı kes" Google erişimini sonlandırır. Uygulamayı kaldırmak cihazdaki kasayı siler. Drive'daki gizli klasörü
+        Google Drive ayarlarındaki "Uygulamaları yönet" bölümünden silebilir, uygulamanın erişimini
+        <a href="https://myaccount.google.com/permissions">Google hesap izinleri</a> sayfasından kaldırabilirsin.
+      </p>
+
+      <h2>İletişim</h2>
+      <p>Sorular için: <a href="https://github.com/bur4kturkk-art/the-vault/issues">github.com/bur4kturkk-art/the-vault/issues</a></p>
+    </main>
+  </body>
+</html>
